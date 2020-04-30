@@ -1,0 +1,41 @@
+<mvc:View
+        controllerName="com.sap.bookstoreTA.controller.overview"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <Page title="Bookshop">
+        <content>
+            <GenericTile
+                header="Manager"
+                class="sapUiSmallMargin"
+                type="Active"
+                press="onPressManager">
+                <tileContent>
+                    <TileContent>
+                        <content>
+                            <ImageContent src="sap-icon://employee-rejections"/>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+           
+            <GenericTile
+                header="Customer"
+                class="sapUiSmallMargin"
+                type="Active"
+                press="onPressCustomer">
+                <tileContent>
+                    <TileContent
+                        >
+                        <content>
+                            <ImageContent src="sap-icon://customer"/>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+           
+           
+        </content>
+    </Page>
+    </Shell>
+</mvc:View>

@@ -1,0 +1,42 @@
+<mvc:View
+	controllerName="com.sap.bookstoreTA.controller.managerDetail"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+
+	<Page id="page" title="Details" showNavButton="true"
+		navButtonPress=".onNavBack" binding="{/}">
+		<subHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Update" press="onPress" />
+				<Button type="Reject" text="Delete" press="onDeleteButton" />
+				<ToolbarSpacer/>
+			</Toolbar>
+
+		</subHeader>
+		<content>
+			<List id="ShortProductList" headerText="Books" items="{/}">
+				<items>
+					<ObjectListItem icon="sap-icon://education"
+						title="{title}" type="Active"
+
+						number="{
+						parts:[{path:'price'},'€'],
+						type: 'sap.ui.model.type.Currency',
+						formatOptions: {showMeasure: false}
+						}"
+						numberUnit="EUR">
+						<firstStatus>
+							<ObjectStatus text="{stock} exemplars" />
+						</firstStatus>
+						<ObjectAttribute text="{auhtor}" />
+						<ObjectAttribute text=" from {author}  " />
+						<ObjectAttribute text="published {pubyear}" />
+						<ObjectAttribute text="ISBN: {isbn}" />
+						<ObjectAttribute text="UUID: {uuid}" />
+
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
